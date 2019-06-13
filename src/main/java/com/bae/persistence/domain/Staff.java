@@ -21,10 +21,14 @@ public class Staff {
 
 	}
 
-	public Staff(int staffID, String firstName) {
+	public Staff(int staffID, String firstName, String lastName, String email, String jobRole, String payTier) {
 		super();
 		this.staffID = staffID;
 		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.jobRole = jobRole;
+		this.payTier = payTier;
 	}
 
 	public int getStaffID() {
