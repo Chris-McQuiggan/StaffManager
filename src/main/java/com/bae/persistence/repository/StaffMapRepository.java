@@ -15,12 +15,12 @@ public class StaffMapRepository implements StaffRepository {
 
 	private JSONUtil util = new JSONUtil();
 
-	public Map<Integer, Staff> getClassMap() {
+	public Map<Integer, Staff> getStaffMap() {
 		return staffMap;
 	}
 
-	public void setClassMap(Map<Integer, Staff> classMap) {
-		this.staffMap = classMap;
+	public void setStaffMap(Map<Integer, Staff> staffMap) {
+		this.staffMap = staffMap;
 	}
 
 	@Override

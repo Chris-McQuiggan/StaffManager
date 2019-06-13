@@ -3,7 +3,7 @@ package com.bae.persistence.repository;
 public interface StaffRepository {
 
 	// C
-	String addStaffMember(String classroom);
+	String addStaffMember(String staffJSON);
 
 	// R
 	String getAllStaff();
@@ -11,7 +11,7 @@ public interface StaffRepository {
 	String getAStaffMember(int id);
 
 	// U
-	String updateStaff(String classroom, int id);
+	String updateStaff(String staffJSON, int id);
 
 	// D
 	String deleteStaffMember(int id);
