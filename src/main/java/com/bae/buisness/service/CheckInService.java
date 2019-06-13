@@ -8,6 +8,8 @@ public interface CheckInService {
 	// R
 	String getAllCheckIns();
 
+	String getCheckedIn();
+
 	String getACheckIn(int id);
 
 	// U
