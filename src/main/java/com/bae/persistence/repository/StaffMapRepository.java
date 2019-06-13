@@ -1,6 +1,27 @@
-package com.bae.buisness.service;
+package com.bae.persistence.repository;
 
-public class StaffServiceImpl implements StaffService {
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.enterprise.inject.Alternative;
+
+import com.bae.persistence.domain.Staff;
+import com.bae.util.JSONUtil;
+
+@Alternative
+public class StaffMapRepository implements StaffRepository {
+
+	private Map<Integer, Staff> staffMap = new HashMap<>();
+
+	private JSONUtil util = new JSONUtil();
+
+	public Map<Integer, Staff> getClassMap() {
+		return staffMap;
+	}
+
+	public void setClassMap(Map<Integer, Staff> classMap) {
+		this.staffMap = classMap;
+	}
 
 	@Override
 	public String addStaffMember(String staffJSON) {
