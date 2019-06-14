@@ -25,32 +25,32 @@ public class StaffMapRepository implements StaffRepository {
 
 	@Override
 	public String addStaffMember(String staffJSON) {
-		// TODO Auto-generated method stub
-		return null;
+		Staff newStaffMember = util.getObjectForJSON(staffJSON, Staff.class);
+		staffMap.put(newStaffMember.getStaffID(), newStaffMember);
+		return "Staff Member successfuly created";
 	}
 
 	@Override
 	public String getAllStaff() {
-		// TODO Auto-generated method stub
-		return null;
+		return util.getJSONForObject(staffMap);
 	}
 
 	@Override
 	public String getAStaffMember(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return util.getJSONForObject(staffMap.get(id));
 	}
 
 	@Override
 	public String updateStaff(String staffJSON, int id) {
-		// TODO Auto-generated method stub
-		return null;
+		Staff staffToUpdate = util.getObjectForJSON(staffJSON, Staff.class);
+		staffMap.put(id, staffToUpdate);
+		return "Staff Member successfully updated";
 	}
 
 	@Override
 	public String deleteStaffMember(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		staffMap.remove((Integer) id);
+		return "Staff Member successfully removed";
 	}
 
 }
