@@ -3,7 +3,7 @@ package com.bae.buisness.service;
 public class CheckInServiceImpl implements CheckInService {
 
 	@Override
-	public String NewCheckIn(String classroom) {
+	public String NewCheckIn(String checkIn) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -27,7 +27,7 @@ public class CheckInServiceImpl implements CheckInService {
 	}
 
 	@Override
-	public String CheckOut(String classroom, int id) {
+	public String CheckOut(String checkOut, int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
