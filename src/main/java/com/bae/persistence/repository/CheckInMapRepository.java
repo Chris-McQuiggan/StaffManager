@@ -21,7 +21,7 @@ public class CheckInMapRepository implements CheckInRepository {
 	// }
 
 	@Override
-	public String NewCheckIn(String checkInJSON) {
+	public String newCheckIn(String checkInJSON) {
 		CheckIn newCheckIn = util.getObjectForJSON(checkInJSON, CheckIn.class);
 		checkInMap.put(newCheckIn.getLogID(), newCheckIn);
 		return checkInJSON;
@@ -52,7 +52,7 @@ public class CheckInMapRepository implements CheckInRepository {
 	}
 
 	@Override
-	public String CheckOut(String checkOutJSON, int id) {
+	public String checkOut(String checkOutJSON, int id) {
 		CheckIn checkToUpdate = util.getObjectForJSON(checkOutJSON, CheckIn.class);
 		checkToUpdate.setTimeIn(checkInMap.get(id).getTimeIn());
 		checkToUpdate.setLogID(id);
