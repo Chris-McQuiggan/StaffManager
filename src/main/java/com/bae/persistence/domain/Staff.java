@@ -15,13 +15,13 @@ public class Staff {
 	private String lastName;
 	private String email;
 	private String jobRole;
-	private String payTier;
+	private int payTier;
 
 	public Staff() {
 
 	}
 
-	public Staff(int staffID, String firstName, String lastName, String email, String jobRole, String payTier) {
+	public Staff(int staffID, String firstName, String lastName, String email, String jobRole, int payTier) {
 		super();
 		this.staffID = staffID;
 		this.firstName = firstName;
@@ -35,11 +35,11 @@ public class Staff {
 		return staffID;
 	}
 
-	public String getName() {
+	public String getFirstName() {
 		return firstName;
 	}
 
-	public void setName(String firstName) {
+	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
@@ -67,11 +67,11 @@ public class Staff {
 		this.jobRole = jobRole;
 	}
 
-	public String getPayTier() {
+	public int getPayTier() {
 		return payTier;
 	}
 
-	public void setPayTier(String payTier) {
+	public void setPayTier(int payTier) {
 		this.payTier = payTier;
 	}
 }

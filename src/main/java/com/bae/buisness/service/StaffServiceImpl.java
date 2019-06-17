@@ -3,7 +3,7 @@ package com.bae.buisness.service;
 public class StaffServiceImpl implements StaffService {
 
 	@Override
-	public String addStaffMember(String classroom) {
+	public String addStaffMember(String staffJSON) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -21,7 +21,7 @@ public class StaffServiceImpl implements StaffService {
 	}
 
 	@Override
-	public String updateStaff(String classroom, int id) {
+	public String updateStaff(String staffJSON, int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

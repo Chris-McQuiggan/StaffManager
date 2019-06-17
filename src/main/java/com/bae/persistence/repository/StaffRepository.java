@@ -1,6 +1,6 @@
-package com.bae.buisness.service;
+package com.bae.persistence.repository;
 
-public interface StaffService {
+public interface StaffRepository {
 
 	// C
 	String addStaffMember(String staffJSON);
@@ -15,5 +15,4 @@ public interface StaffService {
 
 	// D
 	String deleteStaffMember(int id);
-
 }
