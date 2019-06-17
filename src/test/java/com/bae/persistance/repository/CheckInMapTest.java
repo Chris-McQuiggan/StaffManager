@@ -42,14 +42,14 @@ public class CheckInMapTest {
 
 	@Test
 	public void newCheckInTest1() {
-		assertEquals(cmr.NewCheckIn(Constant.jSONCheckIn), Constant.jSONCheckIn);
+		assertEquals(cmr.newCheckIn(Constant.jSONCheckIn), Constant.jSONCheckIn);
 		assertEquals(cmr.getCheckInMap().size(), 1);
 	}
 
 	@Test
-	public void CheckOutTest() {
+	public void checkOutTest() {
 		cmr.getCheckInMap().put(4, Constant.checkIn);
-		assertEquals(Constant.jSONCheckInOut, cmr.CheckOut(Constant.jSONCheckOut, 4));
+		assertEquals(Constant.jSONCheckInOut, cmr.checkOut(Constant.jSONCheckOut, 4));
 		assertEquals("17:20", cmr.getCheckInMap().get(4).getTimeOut());
 	}
 
