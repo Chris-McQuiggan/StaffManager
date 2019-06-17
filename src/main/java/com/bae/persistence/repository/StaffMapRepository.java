@@ -19,9 +19,9 @@ public class StaffMapRepository implements StaffRepository {
 		return staffMap;
 	}
 
-	public void setStaffMap(Map<Integer, Staff> staffMap) {
-		this.staffMap = staffMap;
-	}
+	// public void setStaffMap(Map<Integer, Staff> staffMap) {
+	// this.staffMap = staffMap;
+	// }
 
 	@Override
 	public String addStaffMember(String staffJSON) {
