@@ -14,23 +14,26 @@ public class CheckIn {
 	private String timeIn;
 	private String timeOut;
 	private Double hours;
+	private int staffID;
 
 	public CheckIn() {
 
 	}
 
-	public CheckIn(int logID, String timeIn, String timeOut, Double hours) {
+	public CheckIn(int logID, String timeIn, String timeOut, Double hours, int staffID) {
 		super();
 		this.logID = logID;
 		this.timeIn = timeIn;
 		this.timeOut = timeOut;
 		this.hours = hours;
+		this.staffID = staffID;
 	}
 
-	public CheckIn(int logID, String timeIn) {
+	public CheckIn(int logID, String timeIn, int staffID) {
 		super();
 		this.logID = logID;
 		this.timeIn = timeIn;
+		this.staffID = staffID;
 	}
 
 	public void setLogID(int logID) {
@@ -63,6 +66,14 @@ public class CheckIn {
 
 	public void setHours(Double hours) {
 		this.hours = hours;
+	}
+
+	public int getStaffID() {
+		return staffID;
+	}
+
+	public void setStaffID(int staffID) {
+		this.staffID = staffID;
 	}
 
 }
