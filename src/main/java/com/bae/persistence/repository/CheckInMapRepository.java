@@ -3,9 +3,12 @@ package com.bae.persistence.repository;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.enterprise.inject.Alternative;
+
 import com.bae.persistence.domain.CheckIn;
 import com.bae.util.JSONUtil;
 
+@Alternative
 public class CheckInMapRepository implements CheckInRepository {
 
 	private Map<Integer, CheckIn> checkInMap = new HashMap<>();
