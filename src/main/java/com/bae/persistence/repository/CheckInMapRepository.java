@@ -45,8 +45,7 @@ public class CheckInMapRepository implements CheckInRepository {
 				j++;
 			}
 		}
-		String checkedIn = util.getJSONForObject(checkedInMap);
-		return checkedIn;
+		return util.getJSONForObject(checkedInMap);
 	}
 
 	@Override

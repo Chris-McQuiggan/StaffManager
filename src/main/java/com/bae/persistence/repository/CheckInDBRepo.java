@@ -62,13 +62,14 @@ public class CheckInDBRepo implements CheckInRepository {
 		return util.getJSONForObject(em.find(CheckIn.class, id));
 	}
 
+	@Transactional(TxType.REQUIRED)
 	@Override
 	public String checkOut(String checkOutJSON, int id) {
-		CheckIn checkIn1 = util.getObjectForJSON(checkOutJSON, CheckIn.class);
+		CheckIn checkIn = util.getObjectForJSON(checkOutJSON, CheckIn.class);
 		CheckIn checkInToUpdate = em.getReference(CheckIn.class, id);
 		if (checkInToUpdate != null) {
-			checkInToUpdate.setTimeOut(checkIn1.getTimeOut());
-			checkInToUpdate.setHours(checkIn1.getHours());
+			checkInToUpdate.setTimeOut(checkIn.getTimeOut());
+			checkInToUpdate.setHours(checkIn.getHours());
 			em.persist(checkInToUpdate);
 		}
 		return util.getJSONForObject(em.getReference(CheckIn.class, id));

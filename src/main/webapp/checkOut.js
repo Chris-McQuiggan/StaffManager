@@ -3,11 +3,13 @@ function logOut() {
     document.location.href = 'home.html';
 }
 function checkOut() {
-    let obj = { timeOut: time(), hours: hours() }
+    let obj = {timeOut: time(), hours: hours()};
     let body = JSON.stringify(obj);
+    console.log(body);
     let reqType = "PUT";
-    let id = sessionStorage.getItem("staffID");
-    let url = "http://localhost:8080/StaffManager/api/CheckIn/checkOut/" + id;
+    let id = sessionStorage.getItem("logID");
+    let url = "http://localhost:8080/StaffManager/api/CheckIn/checkOut/" + id + "/";
+    console.log(url);
     makeRequest(reqType, url, body);
 }
 function resolved(result) {
@@ -32,7 +34,10 @@ function hours() {
     let timeIn = new Date(sessionStorage.getItem("timeIn"));
     let timeOut = new Date(sessionStorage.getItem("timeOut"));
     let difference = timeOut-timeIn;
-    let hours = Math.round(difference/(1000*60*60));
+    console.log(difference);
+    console.log(timeOut);
+    console.log(timeIn);
+    let hours = parseFloat((difference/(1000*60*60)).toFixed(0));
     console.log(hours);
     return hours;
 }
