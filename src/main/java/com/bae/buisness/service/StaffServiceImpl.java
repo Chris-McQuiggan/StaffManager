@@ -1,35 +1,37 @@
 package com.bae.buisness.service;
 
+import javax.inject.Inject;
+
+import com.bae.persistence.repository.StaffRepository;
+
 public class StaffServiceImpl implements StaffService {
+
+	@Inject
+	private StaffRepository repo;
 
 	@Override
 	public String addStaffMember(String staffJSON) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.addStaffMember(staffJSON);
 	}
 
 	@Override
 	public String getAllStaff() {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.getAllStaff();
 	}
 
 	@Override
 	public String getAStaffMember(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.getAStaffMember(id);
 	}
 
 	@Override
 	public String updateStaff(String staffJSON, int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.updateStaff(staffJSON, id);
 	}
 
 	@Override
 	public String deleteStaffMember(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.deleteStaffMember(id);
 	}
 
 }
