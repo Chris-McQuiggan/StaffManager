@@ -66,4 +66,12 @@ public class StaffDBRepository implements StaffRepository {
 		return "{\"message\":\"Staff Member Deleted\"}";
 	}
 
+	public void setManager(EntityManager manager) {
+		this.em = manager;
+	}
+
+	public void setUtil(JSONUtil util) {
+		this.util = util;
+	}
+
 }
