@@ -22,6 +22,7 @@ function resolved(result) {
     console.log(check)
     if (check !== null && check !== undefined) {
         sessionStorage.setItem("logID", check.logID);
+        sessionStorage.setItem("timeIn", check.timeIn);
         showCheckOut();
     } else {
         showCheckIn();

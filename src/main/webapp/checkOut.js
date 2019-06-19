@@ -32,7 +32,7 @@ function hours() {
     let timeIn = new Date(sessionStorage.getItem("timeIn"));
     let timeOut = new Date(sessionStorage.getItem("timeOut"));
     let difference = timeOut-timeIn;
-    let hours = difference/(1000*60*60);
+    let hours = Math.round(difference/(1000*60*60));
     console.log(hours);
     return hours;
 }
