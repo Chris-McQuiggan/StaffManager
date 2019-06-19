@@ -16,10 +16,12 @@ import com.bae.util.JSONUtil;
 @Transactional(TxType.SUPPORTS)
 @Default
 public class StaffDBRepository implements StaffRepository {
+
 	@Inject
 	JSONUtil util;
+
 	@PersistenceContext(unitName = "primary")
-	private EntityManager em;
+	EntityManager em;
 
 	@Transactional(TxType.REQUIRED)
 	@Override

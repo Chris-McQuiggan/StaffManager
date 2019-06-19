@@ -1,35 +1,36 @@
 package com.bae.buisness.service;
 
+import javax.inject.Inject;
+
+import com.bae.persistence.repository.CheckInRepository;
+
 public class CheckInServiceImpl implements CheckInService {
+	@Inject
+	private CheckInRepository repo;
 
 	@Override
 	public String newCheckIn(String checkIn) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.newCheckIn(checkIn);
 	}
 
 	@Override
 	public String getAllCheckIns() {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.getAllCheckIns();
 	}
 
 	@Override
 	public String getCheckedIn() {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.getCheckedIn();
 	}
 
 	@Override
 	public String getACheckIn(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.getACheckIn(id);
 	}
 
 	@Override
 	public String checkOut(String checkOut, int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.checkOut(checkOut, id);
 	}
 
 }

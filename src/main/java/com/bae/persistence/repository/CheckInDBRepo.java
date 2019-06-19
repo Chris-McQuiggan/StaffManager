@@ -18,10 +18,12 @@ import com.bae.util.JSONUtil;
 @Transactional(TxType.SUPPORTS)
 @Default
 public class CheckInDBRepo implements CheckInRepository {
+
 	@Inject
 	JSONUtil util;
+
 	@PersistenceContext(unitName = "primary")
-	private EntityManager em;
+	EntityManager em;
 
 	@Transactional(TxType.REQUIRED)
 	@Override
