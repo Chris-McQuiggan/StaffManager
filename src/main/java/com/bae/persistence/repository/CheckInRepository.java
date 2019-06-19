@@ -3,7 +3,7 @@ package com.bae.persistence.repository;
 public interface CheckInRepository {
 
 	// C
-	String newCheckIn(String classroom);
+	String newCheckIn(String checkInJSON);
 
 	// R
 	String getAllCheckIns();
@@ -13,7 +13,7 @@ public interface CheckInRepository {
 	String getACheckIn(int id);
 
 	// U
-	String checkOut(String classroom, int id);
+	String checkOut(String checkOutJSON, int id);
 
 	// Never Delete!
 
