@@ -56,6 +56,7 @@ public class CheckInMapRepository implements CheckInRepository {
 		CheckIn checkToUpdate = util.getObjectForJSON(checkOutJSON, CheckIn.class);
 		checkToUpdate.setTimeIn(checkInMap.get(id).getTimeIn());
 		checkToUpdate.setLogID(id);
+		checkToUpdate.setStaffID(checkInMap.get(id).getStaffID());
 		checkInMap.replace(id, checkToUpdate);
 		return util.getJSONForObject(checkInMap.get(id));
 	}
