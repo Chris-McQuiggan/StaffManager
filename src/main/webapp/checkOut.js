@@ -5,15 +5,12 @@ function logOut() {
 function checkOut() {
     let obj = {timeOut: time(), hours: hours()};
     let body = JSON.stringify(obj);
-    console.log(body);
     let reqType = "PUT";
     let id = sessionStorage.getItem("logID");
-    let url = "http://localhost:8080/StaffManager/api/CheckIn/checkOut/" + id + "/";
-    console.log(url);
+    let url = "http://localhost:8080/StaffManager/api/CheckIn/checkOut/" + id;
     makeRequest(reqType, url, body);
 }
 function resolved(result) {
-    console.log(result);
     let textnode = document.createTextNode("Success");
     let node = document.createElement("div");
     node.setAttribute("id", "successMessage");
@@ -21,7 +18,7 @@ function resolved(result) {
     document.getElementById("pageTitle").appendChild(node);
     node = document.createElement("div");
     node.setAttribute("id", "timeStamp");
-    textnode = document.createTextNode("Time In: " + result.timeOut);
+    textnode = document.createTextNode("Time Out: " + result.timeOut);
     node.appendChild(textnode);
     document.getElementById("pageTitle").appendChild(node);
 }
@@ -34,11 +31,7 @@ function hours() {
     let timeIn = new Date(sessionStorage.getItem("timeIn"));
     let timeOut = new Date(sessionStorage.getItem("timeOut"));
     let difference = timeOut-timeIn;
-    console.log(difference);
-    console.log(timeOut);
-    console.log(timeIn);
     let hours = parseFloat((difference/(1000*60*60)).toFixed(0));
-    console.log(hours);
     return hours;
 }
 function time() {
@@ -49,4 +42,8 @@ function time() {
     sessionStorage.setItem("timeOut", dateTime);
     return dateTime;
 }
+function CheckedIn(){
+    
+}
+
 checkOut();

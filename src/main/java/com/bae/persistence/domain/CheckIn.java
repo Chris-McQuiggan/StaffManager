@@ -13,14 +13,14 @@ public class CheckIn {
 	private int logID;
 	private String timeIn;
 	private String timeOut;
-	private int hours;
+	private Double hours;
 	private int staffID;
 
 	public CheckIn() {
 
 	}
 
-	public CheckIn(int logID, String timeIn, String timeOut, int hours, int staffID) {
+	public CheckIn(int logID, String timeIn, String timeOut, Double hours, int staffID) {
 		super();
 		this.logID = logID;
 		this.timeIn = timeIn;
@@ -60,11 +60,11 @@ public class CheckIn {
 		this.timeOut = timeOut;
 	}
 
-	public int getHours() {
+	public Double getHours() {
 		return hours;
 	}
 
-	public void setHours(int hours) {
+	public void setHours(Double hours) {
 		this.hours = hours;
 	}
 

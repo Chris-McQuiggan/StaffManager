@@ -63,4 +63,10 @@ public class CheckInMapRepository implements CheckInRepository {
 		return util.getJSONForObject(checkInMap.get(id));
 	}
 
+	@Override
+	public String deleteCheckIn(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

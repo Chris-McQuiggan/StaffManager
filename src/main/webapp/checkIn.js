@@ -7,7 +7,7 @@ function welcome() {
 }
 function logGet() {
     let reqType = "GET";
-    let url = "http://localhost:8080/StaffManager/api/CheckIn/getcheckedIn/";
+    let url = "http://localhost:8080/StaffManager/api/CheckIn/getCheckedIn/";
     makeRequest(reqType, url);
 }
 
@@ -54,10 +54,21 @@ function showCheckOut() {
 }
 
 function buttonCheckOut() {
- document.location.href = 'checkOut.html';
+    document.location.href = 'checkOut.html';
 }
 function buttonCheckIn() {
     document.location.href = 'checkedin.html';
+}
+function update() {
+    document.location.href = 'updatestaff.html'
+}
+function deleteAcc() {
+    document.location.href = 'deletestaff.html'
+}
+
+function logOut() {
+    sessionStorage.clear();
+    document.location.href = 'home.html';
 }
 
 welcome();

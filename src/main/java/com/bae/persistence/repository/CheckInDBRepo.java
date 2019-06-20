@@ -66,7 +66,10 @@ public class CheckInDBRepo implements CheckInRepository {
 	@Override
 	public String checkOut(String checkOutJSON, int id) {
 		CheckIn checkIn = util.getObjectForJSON(checkOutJSON, CheckIn.class);
-		CheckIn checkInToUpdate = em.getReference(CheckIn.class, id);
+
+		// CheckIn checkInToUpdate = em.getReference(CheckIn.class, id);
+		CheckIn checkInToUpdate = em.find(CheckIn.class, id);
+
 		if (checkInToUpdate != null) {
 			checkInToUpdate.setTimeOut(checkIn.getTimeOut());
 			checkInToUpdate.setHours(checkIn.getHours());
@@ -81,6 +84,14 @@ public class CheckInDBRepo implements CheckInRepository {
 
 	public void setUtil(JSONUtil util) {
 		this.util = util;
+	}
+
+	@Transactional(TxType.REQUIRED)
+	@Override
+	public String deleteCheckIn(int id) {
+		CheckIn check = em.getReference(CheckIn.class, id);
+		em.remove(check);
+		return "{\"message\":\"Log Deleted\"}";
 	}
 
 }

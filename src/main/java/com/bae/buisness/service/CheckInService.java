@@ -16,5 +16,6 @@ public interface CheckInService {
 	String checkOut(String checkOutJSON, int id);
 
 	// Never Delete!
+	String deleteCheckIn(int id);
 
 }

@@ -33,4 +33,9 @@ public class CheckInServiceImpl implements CheckInService {
 		return repo.checkOut(checkOut, id);
 	}
 
+	@Override
+	public String deleteCheckIn(int id) {
+		return repo.deleteCheckIn(id);
+	}
+
 }
