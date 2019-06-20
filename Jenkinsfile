@@ -38,10 +38,10 @@ pipeline{
 				sh "pwd"
 				sh "sudo cp /var/lib/jenkins/workspace/staffmanager/target/StaffManager.war /home/racer_solo/wildfly-10.1.0.Final/standalone/deployments/"
                         }
+		}
 		stage('--email--'){
                         steps{
                                 emailext attachLog: true, attachmentsPattern: 'target/site/jacoco/index.html, target/site/surefire-report.html', body: '', subject: '', to: 'jenkins.server.project@gmail.com'
-                        	}
                 	}
         	}
 	}
