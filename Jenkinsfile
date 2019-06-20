@@ -41,7 +41,8 @@ pipeline{
 		stage('--email--'){
                         steps{
                                 emailext attachLog: true, attachmentsPattern: 'target/site/jacoco/index.html, target/site/surefire-report.html', body: '', subject: '', to: 'jenkins.server.project@gmail.com'
-                        }
-                }
-        }
+                        	}
+                	}
+        	}
+	}
 }
