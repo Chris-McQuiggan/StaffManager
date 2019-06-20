@@ -66,8 +66,6 @@ public class CheckInDBRepo implements CheckInRepository {
 	@Override
 	public String checkOut(String checkOutJSON, int id) {
 		CheckIn checkIn = util.getObjectForJSON(checkOutJSON, CheckIn.class);
-
-		// CheckIn checkInToUpdate = em.getReference(CheckIn.class, id);
 		CheckIn checkInToUpdate = em.find(CheckIn.class, id);
 
 		if (checkInToUpdate != null) {

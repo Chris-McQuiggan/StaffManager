@@ -14,7 +14,7 @@ function logGet() {
 function resolved(result) {
     console.log(result);
     let check;
-    for (i in result) {
+    for (let i in result) {
         if (result[i].staffID == sessionStorage.getItem("staffID")) {
             check = result[i];
         }
