@@ -16,5 +16,6 @@ public interface CheckInRepository {
 	String checkOut(String checkOutJSON, int id);
 
 	// Never Delete!
+	String deleteCheckIn(int id);
 
 }

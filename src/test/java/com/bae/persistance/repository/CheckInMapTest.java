@@ -70,7 +70,7 @@ public class CheckInMapTest {
 	}
 
 	@Test
-	public void CheckInConversionToJSONTest() {
+	public void checkInConversionToJSONTest() {
 		String jsonCheck = Constant.jSONCheck1;
 		String stringToTest = Constant.util.getJSONForObject(Constant.check1);
 		assertEquals(jsonCheck, stringToTest);

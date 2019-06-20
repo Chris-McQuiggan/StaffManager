@@ -45,8 +45,7 @@ public class CheckInMapRepository implements CheckInRepository {
 				j++;
 			}
 		}
-		String checkedIn = util.getJSONForObject(checkedInMap);
-		return checkedIn;
+		return util.getJSONForObject(checkedInMap);
 	}
 
 	@Override
@@ -62,6 +61,12 @@ public class CheckInMapRepository implements CheckInRepository {
 		checkToUpdate.setStaffID(checkInMap.get(id).getStaffID());
 		checkInMap.replace(id, checkToUpdate);
 		return util.getJSONForObject(checkInMap.get(id));
+	}
+
+	@Override
+	public String deleteCheckIn(int id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -48,7 +48,7 @@ public class CheckInDBRepo implements CheckInRepository {
 		List<CheckIn> checkList = query.getResultList();
 		int j = 1;
 		Map<Integer, CheckIn> checkedInMap = new HashMap<>();
-		for (int i = 1; i <= checkList.size(); i++) {
+		for (int i = 0; i < checkList.size(); i++) {
 			if (checkList.get(i).getTimeOut() == null) {
 				checkedInMap.put(j, checkList.get(i));
 				j++;
@@ -62,13 +62,17 @@ public class CheckInDBRepo implements CheckInRepository {
 		return util.getJSONForObject(em.find(CheckIn.class, id));
 	}
 
+	@Transactional(TxType.REQUIRED)
 	@Override
 	public String checkOut(String checkOutJSON, int id) {
-		CheckIn checkIn1 = util.getObjectForJSON(checkOutJSON, CheckIn.class);
-		CheckIn checkInToUpdate = em.getReference(CheckIn.class, id);
+		CheckIn checkIn = util.getObjectForJSON(checkOutJSON, CheckIn.class);
+
+		// CheckIn checkInToUpdate = em.getReference(CheckIn.class, id);
+		CheckIn checkInToUpdate = em.find(CheckIn.class, id);
+
 		if (checkInToUpdate != null) {
-			checkInToUpdate.setTimeOut(checkIn1.getTimeOut());
-			checkInToUpdate.setHours(checkIn1.getHours());
+			checkInToUpdate.setTimeOut(checkIn.getTimeOut());
+			checkInToUpdate.setHours(checkIn.getHours());
 			em.persist(checkInToUpdate);
 		}
 		return util.getJSONForObject(em.getReference(CheckIn.class, id));
@@ -80,6 +84,14 @@ public class CheckInDBRepo implements CheckInRepository {
 
 	public void setUtil(JSONUtil util) {
 		this.util = util;
+	}
+
+	@Transactional(TxType.REQUIRED)
+	@Override
+	public String deleteCheckIn(int id) {
+		CheckIn check = em.getReference(CheckIn.class, id);
+		em.remove(check);
+		return "{\"message\":\"Log Deleted\"}";
 	}
 
 }

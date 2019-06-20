@@ -1,6 +1,7 @@
 package com.bae.rest;
 
 import javax.inject.Inject;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
@@ -29,7 +30,7 @@ public class CheckInController {
 		return service.getACheckIn(id);
 	}
 
-	@Path("/getcheckedIn")
+	@Path("/getCheckedIn")
 	@GET
 	@Produces({ "application/json" })
 	public String getCheckedIn() {
@@ -48,6 +49,13 @@ public class CheckInController {
 	@Produces({ "application/json" })
 	public String checkOut(String checkOut, @PathParam("id") int id) {
 		return service.checkOut(checkOut, id);
+	}
+
+	@Path("/deleteCheckIn/{id}")
+	@DELETE
+	@Produces({ "application/json" })
+	public String deleteCheckIn(@PathParam("id") int id) {
+		return service.deleteCheckIn(id);
 	}
 
 }

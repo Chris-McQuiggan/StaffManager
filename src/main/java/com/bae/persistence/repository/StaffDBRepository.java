@@ -48,7 +48,7 @@ public class StaffDBRepository implements StaffRepository {
 	@Override
 	public String updateStaff(String staffJSON, int id) {
 		Staff staff1 = util.getObjectForJSON(staffJSON, Staff.class);
-		Staff staffToUpdate = em.getReference(Staff.class, id);
+		Staff staffToUpdate = em.find(Staff.class, id);
 		if (staffToUpdate != null) {
 			staffToUpdate.setFirstName(staff1.getFirstName());
 			staffToUpdate.setLastName(staff1.getLastName());

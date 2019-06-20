@@ -3,7 +3,7 @@ package com.bae.buisness.service;
 public interface CheckInService {
 
 	// C
-	String newCheckIn(String classroom);
+	String newCheckIn(String checkInJSON);
 
 	// R
 	String getAllCheckIns();
@@ -13,8 +13,9 @@ public interface CheckInService {
 	String getACheckIn(int id);
 
 	// U
-	String checkOut(String classroom, int id);
+	String checkOut(String checkOutJSON, int id);
 
 	// Never Delete!
+	String deleteCheckIn(int id);
 
 }
