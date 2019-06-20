@@ -65,8 +65,8 @@ public class CheckInMapRepository implements CheckInRepository {
 
 	@Override
 	public String deleteCheckIn(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		checkInMap.remove((Integer) id);
+		return "Staff Member successfully removed";
 	}
 
 }

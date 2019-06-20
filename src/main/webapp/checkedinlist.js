@@ -14,7 +14,7 @@ function resolved(result) {
     document.getElementById("results").appendChild(node);
     let tr = "<tr>";
     tr += "<td>|-- Log --|</td><td>|------- Time In -------|</td><td>|------- Staff ID -------|</td></tr>";
-        for(i in result){
+        for(let i in result){
         tr += "<td>" + result[i].logID + "</td><td>" + result[i].timeIn + "</td><td>" + result[i].staffID + "</td></tr>";
     }
     tbody.innerHTML += tr;
