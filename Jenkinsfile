@@ -36,7 +36,7 @@ pipeline{
                         steps{
                                 sh "cd /"
 				sh "pwd"
-				sh "sudo cp target/StaffManager.war /home/racer_solo/scripts/wildfly-10.1.0.Final/standalone/deployments/"
+				sh "sudo cp /var/lib/jenkins/workspace/staffmanager/target/StaffManager.war /home/racer_solo/wildfly-10.1.0.Final/standalone/deployments/"
                         }
                 }
         }
