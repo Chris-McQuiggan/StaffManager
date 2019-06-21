@@ -7,7 +7,7 @@ function checkOut() {
     let body = JSON.stringify(obj);
     let reqType = "PUT";
     let id = sessionStorage.getItem("logID");
-    let url = "http://localhost:8080/StaffManager/api/CheckIn/checkOut/" + id;
+    let url = "http://35.204.152.88:8888/StaffManager/api/CheckIn/checkOut/" + id;
     makeRequest(reqType, url, body);
 }
 function resolved(result) {

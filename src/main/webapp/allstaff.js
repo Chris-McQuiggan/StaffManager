@@ -4,7 +4,7 @@ function logOut() {
 }
 function allStaff() {
     let reqType = "GET";
-    let url = "http://localhost:8080/StaffManager/api/Staff/getAllStaff/";
+    let url = "http://35.204.152.88:8888/StaffManager/api/Staff/getAllStaff/";
     makeRequest(reqType, url);
 }
 function resolved(result) {
