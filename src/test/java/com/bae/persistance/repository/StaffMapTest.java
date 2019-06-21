@@ -42,8 +42,8 @@ public class StaffMapTest {
 
 	@Test
 	public void addStaffTest1() {
-		assertEquals(smr.addStaffMember(Constant.jSONStaff1), "Staff Member successfuly created");
-		assertEquals(smr.getStaffMap().size(), 1);
+		assertEquals("Staff Member successfuly created", smr.addStaffMember(Constant.jSONStaff1));
+		assertEquals(1, smr.getStaffMap().size());
 	}
 
 	@Test

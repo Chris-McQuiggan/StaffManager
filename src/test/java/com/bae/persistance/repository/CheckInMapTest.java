@@ -42,8 +42,8 @@ public class CheckInMapTest {
 
 	@Test
 	public void newCheckInTest1() {
-		assertEquals(cmr.newCheckIn(Constant.jSONCheckIn1), Constant.jSONCheckIn1);
-		assertEquals(cmr.getCheckInMap().size(), 1);
+		assertEquals(Constant.jSONCheckIn1, cmr.newCheckIn(Constant.jSONCheckIn1));
+		assertEquals(1, cmr.getCheckInMap().size());
 	}
 
 	@Test
