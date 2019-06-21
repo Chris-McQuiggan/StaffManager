@@ -8,7 +8,7 @@ import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
+import javax.persistence.Query;
 import javax.transaction.Transactional;
 import javax.transaction.Transactional.TxType;
 
@@ -35,16 +35,16 @@ public class CheckInDBRepo implements CheckInRepository {
 
 	@Override
 	public String getAllCheckIns() {
-		TypedQuery<CheckIn> query = null;
-		query = em.createQuery("SELECT c FROM CheckIn c", CheckIn.class);
+		Query query = null;
+		query = em.createQuery("SELECT c FROM CheckIn c");
 		List<CheckIn> checkList = query.getResultList();
 		return util.getJSONForObject(checkList);
 	}
 
 	@Override
 	public String getCheckedIn() {
-		TypedQuery<CheckIn> query = null;
-		query = em.createQuery("SELECT c FROM CheckIn c", CheckIn.class);
+		Query query = null;
+		query = em.createQuery("SELECT c FROM CheckIn c");
 		List<CheckIn> checkList = query.getResultList();
 		int j = 1;
 		Map<Integer, CheckIn> checkedInMap = new HashMap<>();

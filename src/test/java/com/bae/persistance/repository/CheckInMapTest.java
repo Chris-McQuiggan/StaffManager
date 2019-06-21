@@ -42,14 +42,14 @@ public class CheckInMapTest {
 
 	@Test
 	public void newCheckInTest1() {
-		assertEquals(cmr.newCheckIn(Constant.jSONCheckIn), Constant.jSONCheckIn);
+		assertEquals(cmr.newCheckIn(Constant.jSONCheckIn1), Constant.jSONCheckIn1);
 		assertEquals(cmr.getCheckInMap().size(), 1);
 	}
 
 	@Test
 	public void checkOutTest() {
-		cmr.getCheckInMap().put(4, Constant.checkIn);
-		assertEquals(Constant.jSONCheckInOut, cmr.checkOut(Constant.jSONCheckOut, 4));
+		cmr.getCheckInMap().put(4, Constant.checkIn1);
+		assertEquals(Constant.jSONCheckInOut1, cmr.checkOut(Constant.jSONCheckOut1, 4));
 		assertEquals("17:20", cmr.getCheckInMap().get(4).getTimeOut());
 	}
 
@@ -58,8 +58,8 @@ public class CheckInMapTest {
 		cmr.getCheckInMap().put(1, Constant.check1);
 		cmr.getCheckInMap().put(2, Constant.check2);
 		cmr.getCheckInMap().put(3, Constant.check3);
-		cmr.getCheckInMap().put(4, Constant.checkIn);
-		assertEquals("{\"1\":" + Constant.jSONCheckIn + "}", cmr.getCheckedIn());
+		cmr.getCheckInMap().put(4, Constant.checkIn1);
+		assertEquals("{\"1\":" + Constant.jSONCheckIn1 + "}", cmr.getCheckedIn());
 	}
 
 	@Test
@@ -75,6 +75,13 @@ public class CheckInMapTest {
 		String stringToTest = Constant.util.getJSONForObject(Constant.check1);
 		assertEquals(jsonCheck, stringToTest);
 
+	}
+
+	@Test
+	public void deleteCheckInTest() {
+		cmr.getCheckInMap().put(1, Constant.check1);
+		cmr.deleteCheckIn(1);
+		assertEquals(false, cmr.getCheckInMap().containsKey(1));
 	}
 
 }

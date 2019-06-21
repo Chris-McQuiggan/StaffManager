@@ -6,7 +6,7 @@ import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
+import javax.persistence.Query;
 import javax.transaction.Transactional;
 import javax.transaction.Transactional.TxType;
 
@@ -33,8 +33,8 @@ public class StaffDBRepository implements StaffRepository {
 
 	@Override
 	public String getAllStaff() {
-		TypedQuery<Staff> query = null;
-		query = em.createQuery("SELECT s FROM Staff s", Staff.class);
+		Query query = null;
+		query = em.createQuery("SELECT s FROM Staff s");
 		List<Staff> staffList = query.getResultList();
 		return util.getJSONForObject(staffList);
 	}
