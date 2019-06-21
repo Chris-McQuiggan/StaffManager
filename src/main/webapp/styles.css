@@ -36,3 +36,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+#deletebutton{
+    min-width: 50px;
+}

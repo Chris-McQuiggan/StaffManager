@@ -15,10 +15,10 @@ function resolved(result) {
         node.setAttribute("class", "table table-striped table-dark");
         document.getElementById("results").appendChild(node);
         let tr = "<tr>";
-        tr += "<td>ID</td><td>Time In</td><td>Time Out</td><td>hours</td><td>Staff ID</td><td>Delete</td></tr>";
+        tr += "<td>ID</td><td>Time In</td><td>Time Out</td><td>Hours</td><td>Staff ID</td><td>Delete</td></tr>";
         for (let i = 0; i < result.length; i++) {
             //output to table
-            let btn = '<input class="btn btn-info btn-sm col-8" type="button" id=result' + i + " value='Delete' onclick = 'deleteButton(" + '"' + result[i].logID + '"' + ")' >";
+            let btn = '<input class="btn btn-info btn-sm col-8" type="button" id=deletebutton' + i + " value='Delete' onclick = 'deleteButton(" + '"' + result[i].logID + '"' + ")' >";
             tr += "<td>" + result[i].logID + "   </td><td>" + result[i].timeIn + "   </td><td>" + result[i].timeOut + "   </td><td>" + result[i].hours + "   </td><td>" + result[i].staffID + "   </td><td>" + btn + "</td></tr>";
         }
         tbody.innerHTML += tr;
