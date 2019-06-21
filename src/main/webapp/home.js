@@ -13,7 +13,7 @@ function resolved(result) {
         sessionStorage.setItem('email', result.email);
         sessionStorage.setItem('jobRole', result.jobRole);
         sessionStorage.setItem('payTier', result.payTier);
-        document.location.href = 'checkin.html';
+        document.location.href = 'checkIn.html';
     }else{
         rejected("Staff Id Not Found")
     }

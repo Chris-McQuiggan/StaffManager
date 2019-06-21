@@ -37,7 +37,7 @@ function rejected(reason) {
 
 function deleteButton(id) {
     let reqType = "DELETE";
-    let url = "http://localhost:8080/StaffManager/api/CheckIn/deleteCheckIn/"+id;
+    let url = "http://35.204.152.88:8888/StaffManager/api/CheckIn/deleteCheckIn/"+id;
     makeRequest(reqType, url);
 }
 
