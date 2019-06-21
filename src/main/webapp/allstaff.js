@@ -11,9 +11,10 @@ function resolved(result) {
     //create table tags and headings
     let node = document.createElement("tbody");
     node.setAttribute("id", "tbody");
+    node.setAttribute("class", "table table-striped table-dark");
     document.getElementById("results").appendChild(node);
     let tr = "<tr>";
-    tr += "<td>|-- ID --|</td><td>|------- First Name -------|</td><td>|------- Last Name -------|</td><td>|----------------- Email -----------------|</td><td>|----- Job Role -----|</td><td>|-- Pay Tier --|</td></tr>";
+    tr += "<td>ID</td><td>First Name</td><td>Last Name</td><td>Email</td><td>Job Role</td><td>Pay Tier</td></tr>";
     for (let i = 0; i < result.length; i++) {
         //output to table
         // let btn = '<input class="btn btn-info btn-sm col-8" type="button" id=result' + i + " value='More Details' onclick = 'moreButton(" + '"' + result[i].staffID + '"' + ")' >";
