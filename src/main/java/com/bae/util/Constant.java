@@ -10,7 +10,7 @@ public class Constant {
 	public static final Staff staff2 = new Staff(2, "Chester", "Gardner", "chester@mail.com", "Trainer", 2);
 	public static final Staff staff3 = new Staff(3, "Louis", "Simth", "Louis@gmail.com", "Consoltant", 4);
 	public static final String jSONStaff1 = "{\"staffID\":1,\"firstName\":\"Matt\",\"lastName\":\"Hunt\",\"email\":\"mat.hunt@mail.com\",\"jobRole\":\"Trainer\",\"payTier\":2}";
-	public static final String jSONClass2 = "{\"staffID\":2,\"firstName\":\"Chester\",\"lastName\":\"Gardner\",\"email\":\"chester@mail.com\",\"jobRole\":\"Trainer\",\"payTier\":2}";
+	public static final String jSONStaff2 = "{\"staffID\":2,\"firstName\":\"Chester\",\"lastName\":\"Gardner\",\"email\":\"chester@mail.com\",\"jobRole\":\"Trainer\",\"payTier\":2}";
 
 	// check in map testing values
 	public static final CheckIn check1 = new CheckIn(1, "09:00", "17:00", 8.0, 1);

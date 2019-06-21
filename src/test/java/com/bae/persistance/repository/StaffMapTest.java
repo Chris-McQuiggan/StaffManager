@@ -67,7 +67,7 @@ public class StaffMapTest {
 	@Test
 	public void updateStaffTest() {
 		smr.getStaffMap().put(1, Constant.staff1);
-		smr.updateStaff(Constant.jSONClass2, 1);
+		smr.updateStaff(Constant.jSONStaff2, 1);
 		assertEquals("Chester", smr.getStaffMap().get(1).getFirstName());
 	}
 
