@@ -2,6 +2,9 @@ function logOut() {
     sessionStorage.clear();
     document.location.href = 'home.html';
 }
+function back() {
+    document.location.href = 'checkIn.html';
+}
 function load() {
     document.getElementById("firstName").value = sessionStorage.getItem("firstName");
     document.getElementById("lastName").value = sessionStorage.getItem("lastName");
