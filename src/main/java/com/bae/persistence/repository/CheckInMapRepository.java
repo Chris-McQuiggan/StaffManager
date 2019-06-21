@@ -19,10 +19,6 @@ public class CheckInMapRepository implements CheckInRepository {
 		return checkInMap;
 	}
 
-	// public void setCheckInMap(Map<Integer, CheckIn> checkInMap) {
-	// this.checkInMap = checkInMap;
-	// }
-
 	@Override
 	public String newCheckIn(String checkInJSON) {
 		CheckIn newCheckIn = util.getObjectForJSON(checkInJSON, CheckIn.class);

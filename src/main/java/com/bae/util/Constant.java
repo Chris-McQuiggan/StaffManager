@@ -16,10 +16,17 @@ public class Constant {
 	public static final CheckIn check1 = new CheckIn(1, "09:00", "17:00", 8.0, 1);
 	public static final CheckIn check2 = new CheckIn(2, "08:50", "17:20", 8.0, 2);
 	public static final CheckIn check3 = new CheckIn(3, "08:30", "16:00", 8.5, 3);
-	public static final CheckIn checkIn = new CheckIn(4, "08:50", 1);
+	public static final CheckIn checkIn1 = new CheckIn(4, "08:50", 1);
+	public static final CheckIn checkInOut1 = new CheckIn(4, "08:50", "17:20", 8.5, 1);
+	public static final CheckIn checkIn2 = new CheckIn(5, "08:55", 2);
+	public static final CheckIn checkInOut2 = new CheckIn(5, "08:55", "17:40", 8.6, 2);
 	public static final String jSONCheck1 = "{\"logID\":1,\"timeIn\":\"09:00\",\"timeOut\":\"17:00\",\"hours\":8.0,\"staffID\":1}";
 	public static final String jSONCheck2 = "{\"logID\":2,\"timeIn\":\"08:50\",\"timeOut\":\"17:20\",\"hours\":8.0,\"staffID\":2}";
-	public static final String jSONCheckIn = "{\"logID\":4,\"timeIn\":\"08:50\",\"staffID\":1}";
-	public static final String jSONCheckOut = "{\"timeOut\":\"17:20\",\"hours\":\"8.5\"}";
-	public static final String jSONCheckInOut = "{\"logID\":4,\"timeIn\":\"08:50\",\"timeOut\":\"17:20\",\"hours\":8.5,\"staffID\":1}";
+	public static final String jSONCheckIn1 = "{\"logID\":4,\"timeIn\":\"08:50\",\"staffID\":1}";
+	public static final String jSONCheckOut1 = "{\"timeOut\":\"17:20\",\"hours\":\"8.5\"}";
+	public static final String jSONCheckInOut1 = "{\"logID\":4,\"timeIn\":\"08:50\",\"timeOut\":\"17:20\",\"hours\":8.5,\"staffID\":1}";
+	public static final String jSONCheckIn2 = "{\"logID\":5,\"timeIn\":\"08:55\",\"staffID\":2}";
+	public static final String jSONCheckOut2 = "{\"timeOut\":\"17:40\",\"hours\":\"8.6\"}";
+	public static final String jSONCheckInOut2 = "{\"logID\":5,\"timeIn\":\"08:55\",\"timeOut\":\"17:40\",\"hours\":8.5,\"staffID\":2}";
+
 }

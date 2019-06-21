@@ -40,7 +40,7 @@ public class StaffDBTests {
 	@Test
 	public void testGetAllStaff() {
 		Mockito.when(em.createQuery(Mockito.anyString())).thenReturn(query);
-		List<Staff> staff = new ArrayList<Staff>();
+		List<Staff> staff = new ArrayList<>();
 		staff.add(Constant.staff1);
 		Mockito.when(query.getResultList()).thenReturn(staff);
 		Assert.assertEquals("[" + Constant.jSONStaff1 + "]", repo.getAllStaff());
@@ -49,7 +49,7 @@ public class StaffDBTests {
 	@Test
 	public void testGetAllStaffEmpty() {
 		Mockito.when(em.createQuery(Mockito.anyString())).thenReturn(query);
-		List<Staff> staff = new ArrayList<Staff>();
+		List<Staff> staff = new ArrayList<>();
 		Mockito.when(query.getResultList()).thenReturn(staff);
 		Assert.assertEquals("[]", repo.getAllStaff());
 	}
