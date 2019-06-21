@@ -15,7 +15,7 @@ function resolved(result) {
         node.setAttribute("class", "table");
         document.getElementById("results").appendChild(node);
         let tr = "<tr>";
-        tr += "<td>|-- ID --|</td><td>|------- Time In -------|</td><td>|------- Time Out -------|</td><td>|--- hours ---|</td><td>|-- Staff ID --|</td><td>|---- Delete ----|</td></tr>";
+        tr += "<td>ID</td><td>Time In</td><td>Time Out</td><td>hours</td><td>Staff ID</td><td>Delete</td></tr>";
         for (let i = 0; i < result.length; i++) {
             //output to table
             let btn = '<input class="btn btn-info btn-sm col-8" type="button" id=result' + i + " value='Delete' onclick = 'deleteButton(" + '"' + result[i].logID + '"' + ")' >";
