@@ -80,6 +80,13 @@ public class CheckInDBTests {
 	}
 
 	@Test
+	public void testCheckOut2() {
+		Mockito.when(em.find(CheckIn.class, 4)).thenReturn(null);
+		Mockito.when(em.getReference(CheckIn.class, 4)).thenReturn(null);
+		Assert.assertEquals("null", repo.checkOut(Constant.jSONCheckOut1, 4));
+	}
+
+	@Test
 	public void testGetCheckedIn() {
 		Mockito.when(em.createQuery(Mockito.anyString())).thenReturn(query);
 		List<CheckIn> checkIn = new ArrayList<>();
