@@ -77,4 +77,10 @@ public class StaffDBTests {
 		Mockito.when(em.find(Staff.class, 1)).thenReturn(Constant.staff3);
 		Assert.assertEquals(Constant.jSONStaff2, repo.updateStaff(Constant.jSONStaff2, 1));
 	}
+
+	@Test
+	public void testUpdateStaff2() {
+		Mockito.when(em.find(Staff.class, 1)).thenReturn(null);
+		Assert.assertEquals(Constant.jSONStaff2, repo.updateStaff(Constant.jSONStaff2, 1));
+	}
 }
