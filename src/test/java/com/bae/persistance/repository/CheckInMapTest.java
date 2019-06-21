@@ -77,4 +77,11 @@ public class CheckInMapTest {
 
 	}
 
+	@Test
+	public void deleteCheckInTest() {
+		cmr.getCheckInMap().put(1, Constant.check1);
+		cmr.deleteCheckIn(1);
+		assertEquals(false, cmr.getCheckInMap().containsKey(1));
+	}
+
 }
