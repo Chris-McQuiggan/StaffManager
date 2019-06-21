@@ -12,6 +12,7 @@ function resolved(result) {
     if (result[0] !== null && result[0] !== undefined) {
         let node = document.createElement("tbody");
         node.setAttribute("id", "tbody");
+        node.setAttribute("class", "table");
         document.getElementById("results").appendChild(node);
         let tr = "<tr>";
         tr += "<td>|-- ID --|</td><td>|------- Time In -------|</td><td>|------- Time Out -------|</td><td>|--- hours ---|</td><td>|-- Staff ID --|</td><td>|---- Delete ----|</td></tr>";
