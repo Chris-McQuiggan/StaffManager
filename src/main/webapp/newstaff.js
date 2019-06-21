@@ -20,10 +20,13 @@ function resolved(result) {
     node.appendChild(textnode);
     node.setAttribute("id", "successMessage");
     document.getElementById("pageTitle").appendChild(node);
+    const el = document.getElementById('newinput');
+    while (el.firstChild) {
+        el.removeChild(el.firstChild);
+    }
 }
 
 function rejected(reason) {
     alert("An Error occured. Can't Create account");
     console.log(reason);
 }
-
