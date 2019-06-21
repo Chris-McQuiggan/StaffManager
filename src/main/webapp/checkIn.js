@@ -57,7 +57,7 @@ function buttonCheckOut() {
     document.location.href = 'checkOut.html';
 }
 function buttonCheckIn() {
-    document.location.href = 'checkedin.html';
+    document.location.href = 'checkedIn.html';
 }
 function update() {
     document.location.href = 'updatestaff.html'
