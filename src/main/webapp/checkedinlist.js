@@ -4,7 +4,7 @@ function logOut() {
 }
 function checkedIn() {
     let reqType = "GET";
-    let url = "http://localhost:8080/StaffManager/api/CheckIn/getCheckedIn";
+    let url = "http://35.204.152.88:8888/StaffManager/api/CheckIn/getCheckedIn";
     makeRequest(reqType, url);
 }
 function resolved(result) {

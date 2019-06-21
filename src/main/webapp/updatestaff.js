@@ -20,7 +20,7 @@ function update() {
     let body = JSON.stringify(obj);
     let reqType = "PUT";
     let id = sessionStorage.getItem("staffID");
-    let url = "http://localhost:8080/StaffManager/api/Staff/updateStaff/" + id + "/";
+    let url = "http://35.204.152.88:8888/StaffManager/api/Staff/updateStaff/" + id + "/";
     makeRequest(reqType, url, body);
 }
 function resolved(result) {
