@@ -30,6 +30,7 @@ function resolved(result) {
     const el = document.getElementById('pageTitle');
     while (el.firstChild) {
         el.removeChild(el.firstChild);
+    }
     let textnode = document.createTextNode("Account Updated");
     let node = document.createElement("div");
     node.setAttribute("id", "successMessage");
