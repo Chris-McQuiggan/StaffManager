@@ -12,6 +12,7 @@ function resolved(result) {
     let node = document.createElement("tbody");
     node.setAttribute("id", "tbody");
     node.setAttribute("class", "table table-striped table-dark");
+    node.setAttribute("style", "margin:auto;");
     document.getElementById("results").appendChild(node);
     let tr = "<tr>";
     tr += "<td>Log</td><td>Time In</td><td>Staff ID</td></tr>";
