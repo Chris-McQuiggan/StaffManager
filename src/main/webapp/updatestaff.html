@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -11,7 +12,7 @@
     <input class="btn btn-info btn-lg col-3" type="button" id="logOutbutton" value="Log Out" onclick='logOut()'>
     <br>
     <input class="btn btn-info btn-lg col-3" type="button" id="logOutbutton" value="Back" onclick='back()'>
-    <center>
+    <div style="text-align:center">
         <br>
         <div id="box">
             <div id="box2">
@@ -19,26 +20,26 @@
                     Update Account
                 </div>
                 <form>
-                    <div class="input-group flex-nowrap input-group-lg col-6">
+                    <div class="input-group flex-nowrap input-group-lg col-6" style="margin:auto;">
                         <input type="text" class="form-control bg-info text-white shadow-lg  col-6" id="firstName"
                             placeholder="First Name" aria-label="text" aria-describedby="text-input">
                         <input type="text" class="form-control bg-info text-white shadow-lg  col-6" id="lastName"
                             placeholder="Last Name" aria-label="text" aria-describedby="text-input">
                     </div>
                     <br>
-                    <div class="input-group flex-nowrap input-group-lg col-6">
+                    <div class="input-group flex-nowrap input-group-lg col-6" style="margin:auto;">
                         <input type="text" class="form-control bg-info text-white shadow-lg  col-12" id="email"
                             placeholder="email" aria-label="text" aria-describedby="text-input">
                     </div>
                     <br>
-                    <div class="input-group flex-nowrap input-group-lg col-6">
+                    <div class="input-group flex-nowrap input-group-lg col-6" style="margin:auto;">
                         <input type="text" class="form-control bg-info text-white shadow-lg  col-6" id="jobrole"
                             placeholder="Job Role" aria-label="text" aria-describedby="text-input">
                         <input type="number" class="form-control bg-info text-white shadow-lg  col-6" id="paytier"
                             placeholder="Pay Tier" aria-label="text" aria-describedby="text-input">
                     </div>
                     <br>
-                    <div class="input-group flex-nowrap input-group-lg col-6">
+                    <div class="input-group flex-nowrap input-group-lg col-6" style="margin:auto;"> 
                         <input class="btn btn-info btn-lg col-12" type="button" id="submitbutton" value="Submit"
                             onclick='update()'>
 
@@ -48,7 +49,7 @@
         </div>
         </div>
         </div>
-    </center>
+    </div>
     <script type="text/javascript" src="updatestaff.js"></script>
     <script type="text/javascript" src="apirequest.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

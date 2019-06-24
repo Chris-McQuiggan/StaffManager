@@ -40,3 +40,8 @@ body {
 #deletehead{
     min-width: 150px;
 }
+#results {
+    width:auto;
+    margin-left: 25%;
+    margin-right: 25%;
+}
