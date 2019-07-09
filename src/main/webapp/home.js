@@ -1,7 +1,7 @@
 function buttonGet() {
     let reqType = "GET";
     let search = document.getElementById("staffID").value;
-    let url = "http://35.204.152.88:8888/StaffManager/api/Staff/getAStaffMember/" + search;
+    let url = "/StaffManager/api/Staff/getAStaffMember/" + search;
     makeRequest(reqType, url);
 }
 
