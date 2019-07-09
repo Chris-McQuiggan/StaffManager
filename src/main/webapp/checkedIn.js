@@ -2,7 +2,7 @@ function checkIn(){
     let obj = { timeIn: time(), staffID: sessionStorage.getItem("staffID") }
     let body = JSON.stringify(obj);
     let reqType = "POST";
-    let url = "http://35.204.152.88:8888/StaffManager/api/CheckIn/newCheckIn/";
+    let url = "/StaffManager/api/CheckIn/newCheckIn/";
     makeRequest(reqType, url, body);
 }
 
