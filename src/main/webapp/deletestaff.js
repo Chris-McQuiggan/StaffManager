@@ -5,7 +5,7 @@ function logOut() {
 function deleteAcc(){
     let reqType = "DELETE";
     let id = sessionStorage.getItem("staffID");
-    let url = "http://35.204.152.88:8888/StaffManager/api/Staff/deleteStaffMember/" + id + "/";
+    let url = "/StaffManager/api/Staff/deleteStaffMember/" + id + "/";
     makeRequest(reqType, url);
 }
 function resolved(result) {
