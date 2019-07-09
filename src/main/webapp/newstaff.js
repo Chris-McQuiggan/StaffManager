@@ -11,7 +11,7 @@ function create() {
     let obj = { firstName: firstName, lastName: lastName, email: email, jobRole: jobrole, payTier: paytier };
     let body = JSON.stringify(obj);
     let reqType = "POST";
-    let url = "http://35.204.152.88:8888/StaffManager/api/Staff/addStaffMember/";
+    let url = "/StaffManager/api/Staff/addStaffMember/";
     makeRequest(reqType, url, body);
 }
 function resolved(result) {
